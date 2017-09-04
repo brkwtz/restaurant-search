@@ -1,4 +1,2 @@
 /node_modules
-/assets/less
-/resources/dataset
-/resources/mockups
+.DS_Store
