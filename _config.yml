@@ -1,1 +1,1 @@
-include: [../../resources/graphics/star-empty.png, ../../resources/graphics/stars-plain.png]
+include: [./resources/graphics/star-empty.png, ./resources/graphics/stars-plain.png]
