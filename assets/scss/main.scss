@@ -1,5 +1,5 @@
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font: 'Helvetica Neue';
   font-size: 13px;
   background-image: url('../../resources/graphics/background.png');
   padding: 5vh 5vw;
@@ -11,13 +11,16 @@ body {
   }
 
   .container {
-    height: 80vh;
+    height: 70vh;
     width: 100vw;
+    min-width: 700px;
+    max-width: 875px;
+    overflow: hidden;
     box-shadow: 10px 10px 10px 10px grey;
     background: white;
 
     #search {
-      background-color: #066072;
+      background-color: #1C688E;
       height: 10vh;
       padding-top: 3vh;
     }
@@ -48,7 +51,7 @@ body {
       }
 
       li:hover {
-        background-color: blue;
+        background-color: #2897C5;
         color: white;
         border-radius: 2px;
       }
@@ -84,6 +87,7 @@ body {
       
       p {
         display: inline;
+        color: #848484;
       }
 
       #results-stats {
@@ -95,6 +99,10 @@ body {
         width: 80px;
         border-radius: 4px;
       }
+      
+      .restaurantInfo {
+        color: #848484;
+      }
 
       .star {
         height: 15px;
@@ -103,6 +111,7 @@ body {
 
       h1 {
         font-size: 16px;
+        color: black;
       }
 
       h2 {

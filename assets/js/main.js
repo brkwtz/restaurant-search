@@ -22,6 +22,7 @@ $(function () {
       if(i < Math.floor(starsCount)) starsHTML += '<img class="star" src="../../resources/graphics/stars-plain.png">';
       if(i >=  Math.floor(starsCount)) starsHTML += '<img class="star" src="../../resources/graphics/star-empty.png">';
     } 
+    console.log(starsHTML)
     return starsHTML;
   }
 
