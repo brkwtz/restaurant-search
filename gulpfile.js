@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var less = require('gulp-less-sourcemap');
-var imagemin = require('gulp-imagemin');
 
 // Static Server
 gulp.task('serve', function() {
@@ -39,14 +38,6 @@ gulp.task('less', function() {
     }))
     .pipe(gulp.dest("assets/css"))
     .pipe(browserSync.stream());
-});
-
-// Optimize images
-gulp.task('images', function(){
-  return gulp.src('resources/graphics/*.+png')
-  .pipe(imagemin())
-  .pipe(gulp.dest("assets/images"))
-  .pipe(browserSync.stream());
 });
 
 
