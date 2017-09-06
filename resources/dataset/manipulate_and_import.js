@@ -1,5 +1,5 @@
-const appID = YOUR_APP_ID;
-const apiKey = YOUR_API_KEY;
+const appID = require('./secrets.js').YOUR_APP_ID;
+const apiKey = require('./secrets.js').YOUR_API_KEY;
 
 const algoliasearch = require('algoliasearch');
 const client = algoliasearch(appID, apiKey);
@@ -51,17 +51,31 @@ function interpolateDiningStyle(jsonifiedCSV, json) {
     const list = cleanAndParseJSON(json);
     const infoDict = {};
     const infoFields = Object.keys(info[0]);
+    infoFields.push("rounded_stars_count");
 
-    // build dictionary from jsonifiedCSV (adding simplified ratings)
+    // build dictionary from jsonifiedCSV
     info.forEach(restaurant => {
         infoDict[restaurant["objectID"]] = restaurant;
+        // add simplified ratings
         infoDict[restaurant["objectID"]]["rounded_stars_count"] = parseInt(restaurant["stars_count"]);
     })
 
-    infoFields.push("rounded_stars_count");
-
-    // add contents of each restaurant entry in dictionary to json data
     list.forEach(restaurant => {
+        // group JCB, Carte Blanche, Diners Club with Discover
+        let paymentOpts = restaurant.payment_options;
+        const paymentOptsCopy = [];
+        let discover, jcb, dinersClub, carteBlanche;
+        for(let i = 0; i < paymentOpts.length; i++) {
+            if(paymentOpts[i] === 'Discover') discover = true;
+            else if(paymentOpts[i] === 'JCB') jcb = true;
+            else if(paymentOpts[i] === 'Carte Blanche') carteBlanche = true;
+            else if(paymentOpts[i] === 'Diners Club') dinersClub = true;
+            else paymentOptsCopy.push(paymentOpts[i]);
+        }
+        if(discover || jcb || carteBlanche || dinersClub) paymentOptsCopy.push('Discover');
+        restaurant.payment_options = paymentOptsCopy;
+
+        // add contents of each restaurant entry in dictionary to json data
         if(infoDict[restaurant["objectID"]]) {
             infoFields.forEach(attribute => {
                 restaurant[attribute] = infoDict[restaurant["objectID"]][attribute];

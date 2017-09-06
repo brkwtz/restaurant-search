@@ -14,53 +14,59 @@ body {
     height: 70vh;
     width: 100vw;
     min-width: 700px;
-    max-width: 875px;
+    max-width: 820px;
+    max-height: 517px;
     overflow: hidden;
-    box-shadow: 10px 10px 10px 10px grey;
+    box-shadow: 0px 2px 6px grey;
     background: white; }
-    /* line 22, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+    /* line 23, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
     body .container #search {
       background-color: #1C688E;
       height: 10vh;
       padding-top: 3vh; }
-    /* line 28, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+    /* line 29, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
     body .container #sidebar {
       border-right: 1px solid #E6E6E6;
       padding: 10px;
       height: 100%; }
-      /* line 33, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 34, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar h1 {
         font-size: 14px; }
-      /* line 37, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 38, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar h2 {
         font-size: 13px;
         display: inline; }
-      /* line 42, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 43, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar h3 {
         font-size: 13px;
         color: darkgray;
         position: relative;
         float: right; }
-      /* line 49, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
-      body .container #sidebar li {
-        padding: 2px; }
-      /* line 53, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
-      body .container #sidebar li:hover {
-        background-color: #2897C5;
-        color: white;
-        border-radius: 2px; }
-      /* line 59, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 50, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar ul {
         padding-left: 15px; }
-      /* line 63, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
-      body .container #sidebar .star {
-        height: 15px;
-        width: 15px; }
-    /* line 69, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+        /* line 53, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+        body .container #sidebar ul .active {
+          background-color: #2897C5;
+          color: white;
+          border-radius: 2px; }
+        /* line 59, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+        body .container #sidebar ul li {
+          padding: 2px; }
+          /* line 62, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+          body .container #sidebar ul li .star {
+            height: 15px;
+            width: 15px; }
+        /* line 68, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+        body .container #sidebar ul li:hover {
+          background-color: #2897C5;
+          color: white;
+          border-radius: 2px; }
+    /* line 76, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
     body .container #results {
       padding-top: 10px;
       font-size: 14px; }
-      /* line 73, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 80, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results button {
         width: 184px;
         height: 37px;
@@ -70,68 +76,68 @@ body {
         outline: inherit !important;
         border: 0.5px solid #707070;
         margin: 20px auto; }
-      /* line 84, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 91, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results .restaurant {
         margin: 10px; }
-      /* line 88, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 95, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results p {
         display: inline;
         color: #848484; }
-      /* line 93, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 100, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results #results-stats {
         margin: 20px 0px; }
-      /* line 97, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 104, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results .restaurantImage {
         height: 80px;
         width: 80px;
         border-radius: 4px; }
-      /* line 103, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 110, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results .restaurantInfo {
         color: #848484; }
-      /* line 107, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 114, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results .star {
         height: 15px;
         width: 15px; }
-      /* line 112, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 119, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results h1 {
         font-size: 16px;
         color: black; }
-      /* line 117, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 124, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #results h2 {
         color: #FFAB66;
         font-size: inherit;
         display: inline; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 131, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+  /* line 138, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
   body .container {
     height: 100%;
     min-width: 100px;
     width: 90vw; }
-    /* line 136, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+    /* line 143, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
     body .container #search-box::placeholder {
       font-size: 11px; }
-    /* line 140, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+    /* line 147, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
     body .container #results {
       text-align: center; }
-    /* line 144, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+    /* line 151, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
     body .container #sidebar {
       padding: 1px; }
-      /* line 147, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 154, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar .star {
         height: 10px;
         width: 10px; }
-      /* line 152, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 159, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar ul {
         padding-left: 0; }
-      /* line 156, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 163, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar h1 {
         font-size: 12px; }
-      /* line 160, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 167, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar h2 {
         font-size: 10px;
         display: inline; }
-      /* line 165, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
+      /* line 172, /Users/brkwtz/job-apps/code-tests/algolia/tech-assignment/assets/scss/main.scss */
       body .container #sidebar h3 {
         font-size: 10px;
         color: darkgray;

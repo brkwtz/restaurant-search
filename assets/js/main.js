@@ -22,7 +22,6 @@ $(function () {
       if(i < Math.floor(starsCount)) starsHTML += '<img class="star" src="resources/graphics/starsPlain.png">';
       if(i >=  Math.floor(starsCount)) starsHTML += '<img class="star" src="resources/graphics/starEmpty.png">';
     } 
-    console.log(starsHTML)
     return starsHTML;
   }
 
@@ -67,6 +66,7 @@ $(function () {
     helper.toggleFacetRefinement('payment_options', facetValue)
           .search();
   });
+
 
   function renderRatingsList(content) {
     $('#ratings').html(function() {
