@@ -57,7 +57,6 @@ $(function () {
   function renderPaymentOptionsList(content) {
     $('#payment-options').html(function() {
       return $.map(content.getFacetValues('payment_options'), function(facet) {
-        if(facet.name === 'Diners Club' || facet.name === 'JCB' || facet.name === 'Carte Blanche') return '';
         return $('<li class="payment-option">').append('<h2>' + facet.name + '</h2>').append('<h3>' + facet.count + '</h3>');
       });
     });
@@ -65,8 +64,6 @@ $(function () {
 
   $('#payment-options').on('click', 'li', function(e) {
     var facetValue = $(this).text().replace(/[0-9]/g, '');
-    // alter line below to return JCB, Carte Blanche, Diners Club along with Discover
-    if(facetValue === 'Discover') facetValue = 'Discover';
     helper.toggleFacetRefinement('payment_options', facetValue)
           .search();
   });
