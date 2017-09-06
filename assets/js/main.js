@@ -70,7 +70,8 @@ $(function () {
 
   function renderRatingsList(content) {
     $('#ratings').html(function() {
-      return $.map([0,1,2,3,4,5], function(num) {
+      return $.map(content.getFacetValues('rounded_stars_count', {sortBy: ['name:desc']}), function(facet) {
+        let num = facet.name;
         let stars = renderStars(num);
         return $('<li class="rating" id='+num+'>').append(stars);
       });
