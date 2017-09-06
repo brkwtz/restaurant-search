@@ -34,7 +34,7 @@ $(function () {
   function renderHits(content) {
     $('#results-list').html(function() {
       return $.map(content.hits, function(hit) {
-        return '<li> <div class="restaurant"><div class="row"><div class="col-sm-3"><img class="restaurantImage" src=' + hit._highlightResult.image_url.value + '></div><div class="restaurantInfo"><div class="row"><div class="col"><h1>' + hit._highlightResult.name.value + '</h1></div></div><div class="row"><div class="col"><h2>' + hit._highlightResult.stars_count.value + '</h2> ' + renderStars(hit._highlightResult.stars_count.value) + ' (' + hit._highlightResult.reviews_count.value + ' reviews)</div></div><div class="row"><div class="col">' + hit._highlightResult.food_type.value + ' | ' + hit._highlightResult.neighborhood.value + ' | ' + hit._highlightResult.price_range.value + '</div></div></div></div></div></li>';
+        return '<li> <div class="restaurant"><div class="row"><img class="restaurant-img" src=' + hit._highlightResult.image_url.value + '><div class="restaurant-info"><div class="row"><div class="col"><h1>' + hit._highlightResult.name.value + '</h1></div></div><div class="row"><div class="col"><h2>' + hit._highlightResult.stars_count.value + '</h2> ' + renderStars(hit._highlightResult.stars_count.value) + ' (' + hit._highlightResult.reviews_count.value + ' reviews)</div></div><div class="row"><div class="col">' + hit._highlightResult.food_type.value + ' | ' + hit._highlightResult.neighborhood.value + ' | ' + hit._highlightResult.price_range.value + '</div></div></div></div></div></li>';
       });
     });
   }
